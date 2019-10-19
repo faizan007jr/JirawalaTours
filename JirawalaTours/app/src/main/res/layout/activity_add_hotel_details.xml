@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".AddHotelDetailsActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="State"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spnr_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/State" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Location"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spnr_loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/l_name"
+                android:prompt="@string/location" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Hotel"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_hname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Room Details"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <CheckBox
+                    android:id="@+id/cb_duplex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Duplex" />
+
+                <Spinner
+                    android:id="@+id/spnr_dav"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/et_drent"
+                    android:entries="@array/number"
+                    android:prompt="@string/av"
+                    android:layout_alignBaseline="@id/et_drent"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_drent"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="$"
+                    android:visibility="invisible"
+                    android:inputType="number"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/cb_fduplex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Full-Duplex" />
+
+                <Spinner
+                    android:id="@+id/spnr_fav"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/et_frent"
+                    android:entries="@array/number"
+                    android:prompt="@string/av"
+                    android:layout_alignBaseline="@id/et_frent"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_frent"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="$"
+                    android:visibility="invisible"
+                    android:inputType="number"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/cb_phouse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Penthouse" />
+
+                <Spinner
+                    android:id="@+id/spnr_pav"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/et_prent"
+                    android:entries="@array/number"
+                    android:prompt="@string/av"
+                    android:layout_alignBaseline="@id/et_prent"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_prent"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="$"
+                    android:visibility="invisible"
+                    android:inputType="number"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/cb_qroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Quad-Room" />
+
+                <Spinner
+                    android:id="@+id/spnr_qav"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/et_qrent"
+                    android:entries="@array/number"
+                    android:prompt="@string/av"
+                    android:layout_alignBaseline="@id/et_qrent"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_qrent"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="$"
+                    android:visibility="invisible"
+                    android:inputType="number"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_newhsubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="OnNewHotel"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_adduser"
+            android:icon="@drawable/ic_add_user"
+            android:title="Add Employee" />
+        <item
+            android:id="@+id/nav_makeadmin"
+            android:icon="@drawable/ic_make_admin"
+            android:title="Assign Admin Rights" />
+        <item
+            android:id="@+id/nav_bookhotel"
+            android:icon="@drawable/ic_hotel_building"
+            android:title="Book Hotel" />
+        <item
+            android:id="@+id/nav_package"
+            android:icon="@drawable/ic_package"
+            android:title="Package" />
+
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_history"
+            android:title="Booking History" />
+        <item
+            android:id="@+id/nav_addhotel"
+            android:icon="@drawable/ic_hotel"
+            android:title="Package" />
+    </group>
+
+    <item android:title="Sign Out">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>
